@@ -5,6 +5,7 @@
 - vanlig ping pong
 - finn fem feil
 - gjett hvem/logo/sted
+- quiz
 - flappy bird
 - 2048
 - tetris
