@@ -3,6 +3,7 @@
 - snake
 - one man ping pong
 - vanlig ping pong
+- Tre på rad, Tic Tac Toe
 - finn fem feil
 - gjett hvem/logo/sted
 - flappy bird
