@@ -10,4 +10,4 @@
 - tetris
 - minesweeper
 - shitty mario spill
-- escape room (point and click)
+- escape room (point and click) :)
