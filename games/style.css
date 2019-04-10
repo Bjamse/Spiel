@@ -1,0 +1,35 @@
+h1 {
+    text-align: center;
+}
+
+head {
+    border: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: darkgrey;
+}
+
+li {
+    float: left;
+}
+
+#about {
+    float: right;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: whitesmoke;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 20px;
+}
+
+li a:hover, .dropdown:hover, .dropbtn:hover {
+    background-color: grey;
+}
