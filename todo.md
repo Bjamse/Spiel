@@ -6,9 +6,10 @@
 - Tre på rad, Tic Tac Toe
 - finn fem feil
 - gjett hvem/logo/sted
+- quiz
 - flappy bird
 - 2048
 - tetris
 - minesweeper
 - shitty mario spill
-- escape room (point and click)
+- escape room (point and click) :)
