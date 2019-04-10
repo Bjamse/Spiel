@@ -14,10 +14,6 @@ ul {
     background-color: darkgrey;
 }
 
-li {
-    float: left;
-}
-
 #about {
     float: right;
 }
