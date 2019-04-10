@@ -22,7 +22,7 @@ li {
     float: right;
 }
 
-li a, .dropbtn {
+li a {
     display: inline-block;
     color: whitesmoke;
     text-align: center;
@@ -30,6 +30,6 @@ li a, .dropbtn {
     padding: 15px 20px;
 }
 
-li a:hover, .dropdown:hover, .dropbtn:hover {
+li a:hover {
     background-color: grey;
 }
