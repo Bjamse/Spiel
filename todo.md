@@ -18,3 +18,7 @@
    - minesweeper
    - shitty mario spill
    - escape room (point and click) :)
+
+
+- forslag:
+   - guitar hero/piano tiles
