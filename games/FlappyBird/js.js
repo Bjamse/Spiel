@@ -5,7 +5,7 @@ let tubes = [];
 let score = 0;
 let scoreLine = 30;
 let highscores = [];
-
+let keyDown = false;
 window.onload = boot;
 function boot() {
     // if highscore exists in localstorage, set it
@@ -17,9 +17,17 @@ function startNewGame(){
     loop2= setInterval(makeTube, 2000);
 
     window.onmousedown = function(){BB.jump()};
+    window.onkeydown = keyPressed;
+    window.onkeyup = function(){keyDown = false};
     loop = setInterval(moveObjectsOnScreen, 10);
     addScore();
 
+}
+function keyPressed(evt) {
+    if(evt.keyCode === 32 && !(keyDown)){
+        BB.jump();
+        keyDown = true;
+    }
 }
 
 
@@ -75,6 +83,9 @@ function endGame() {
     BB.box.style.left = "-300px";
     BB = null;
     window.onmousedown = null;
+    window.onkeydown = null;
+    window.onkeyup = null;
+    keyDown = false;
     for(let i in tubes)tubes[i].selfRemove();
     tubes = [];
     updateScoreBoard();
@@ -129,7 +140,7 @@ function scoreboard() {
         table += "<h2>no highscores saved</h2>"
     }
     table += "<div class='button' onclick='startNewGame();removeElement(document.getElementById(\"Scoreboard\"))'>New Game</div>" +
-        "<div class='button' onclick='window.close()'>Quit</div>";
+        "";
 
     menu.innerHTML = table;
 
