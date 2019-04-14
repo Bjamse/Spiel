@@ -7,12 +7,12 @@
 - GAMES
    - ~~snake~~
    - ~~one man ping pong~~
+   - ~~flappy bird~~
    - vanlig ping pong
    - Tre på rad, Tic Tac Toe
    - finn fem feil
    - gjett hvem/logo/sted
    - quiz
-   - flappy bird
    - 2048
    - tetris
    - minesweeper
