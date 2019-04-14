@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FlappyBird</title>
+    <link rel="stylesheet" href="css.css">
+    <script src="js.js"></script>
+    <script src="classes.js"></script>
+</head>
+<body>
+<!--    hitboksen til fuglen. skal ikke tilte-->
+<div id="birdBox">
+    <div id="bird"></div>
+</div>
+
+<div id="StartMenu" class="menu">
+    <h1>Flappy bird!</h1>
+    <div class="button" onclick="startNewGame();removeElement(document.getElementById('StartMenu'))">
+        Start
+    </div>
+    <br>
+    <div class="button" onclick="scoreboard();removeElement(document.getElementById('StartMenu'))">
+        Scoreboard
+    </div>
+    <br>
+    <div class="button" onclick="window.close()">
+        Quit
+    </div>
+</div>
+
+<!--hitboxen til bakken-->
+<div id="floor">
+
+</div>
+
+
+
+
+</body>
+</html>
