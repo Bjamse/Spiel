@@ -4,12 +4,21 @@ let loop2;
 let tubes = [];
 let score = 0;
 let scoreLine = 30;
-let highscores = [];
+let highscore;
+let newHigh = false;
 let keyDown = false;
 window.onload = boot;
 function boot() {
     // if highscore exists in localstorage, set it
-    if(localStorage.highscores !== undefined){highscores = JSON.parse(localStorage.highscores);}
+    if(localStorage.highscore !== undefined &&
+        localStorage.highscore !== "undefined" &&
+        localStorage.highscore !== "null" &&
+        !(isNaN(parseInt(localStorage.highscore)))
+    ){
+        highscore = parseInt(localStorage.highscore);
+    }else {
+        highscore = 0;
+    }
 }
 
 function startNewGame(){
@@ -97,50 +106,28 @@ function endGame() {
 }
 
 function updateScoreBoard() {
-    let addIndex;
-    let username = prompt("Add your score of "+score+" to the scoreboard", "Username");
-    if( username === null){
-        alert("You opted to not add your score to the scoreboard");
-        return false;
+    if(highscore < score){
+        highscore = score;
+        newHigh = true;
+        localStorage.highscore = score;
     }
-
-    if(highscores.length === 0){
-        addIndex = 0;
-    }else {
-        for(let i in highscores){
-            if(score > highscores[i].score){
-                addIndex = i;
-            }
-        }
-    }
-
-    highscores.splice(addIndex, 0, {score: score.toString(), name: username.toString()});
-    while(highscores.length > 10){
-        highscores.pop();
-    }
-    highscores.sort(function(a, b) {
-        return a.score - b.score;
-    });
-    highscores.reverse();
-    localStorage.highscores = JSON.stringify(highscores);
-    return true;
 }
 
 function scoreboard() {
     let menu = document.createElement("div");
     menu.id = "Scoreboard";
     menu.className = "menu";
-    let table ="<h1>Scoreboard</h1>";
-    if (highscores.length > 0){
-        table += "<h4>Player:Score</h4>";
-        for(let i in highscores){
-            table += ""+highscores[i].name+":"+highscores[i].score+"<br>";
-        }
-    }else {
-        table += "<h2>no highscores saved</h2>"
+    let table ="<h1>You Died!</h1>";
+
+    if(newHigh){
+        table += "<h3 class='rainbowText'>New Highscore!</h3> <br>";
     }
-    table += "<div class='button' onclick='startNewGame();removeElement(document.getElementById(\"Scoreboard\"))'>New Game</div>" +
-        "";
+    table += "<table style='margin: auto; text-align: left'>" +
+        "<tr><td>Score:</td> <td>"+score+"</td></tr>" +
+        "<tr><td>HighScore:</td><td>"+highscore+"</td></tr>" +
+        "</table>" +
+        "<div class='button' onclick='startNewGame();removeElement(document.getElementById(\"Scoreboard\"))'>Again!</div>";
+
 
     menu.innerHTML = table;
 
