@@ -1,7 +1,7 @@
 class Bird{
     constructor(box){
         this.box = document.getElementById(box);
-        this.img = this.box.children[0];
+        // this.img = this.box.children[0];                 Not in use!
         this.sides = Math.floor(innerHeight/12);
         this.box.style.width = (this.sides * (148/122))+"px";
         this.box.style.height = this.sides+"px";
@@ -30,7 +30,9 @@ class Bird{
 
     }
     jump(){
-        this.speed = this.jumpHeight;
+        if(this.box.getBoundingClientRect().top > -10){
+            this.speed = this.jumpHeight;
+        }
     }
 
     collide(x){
@@ -73,7 +75,7 @@ class Tube{
         this.lower.style.top = (this.upper.getBoundingClientRect().bottom + this.gap) + "px";
 
         this.speed = 4;
-        this.width = this.upper.getBoundingClientRect().width
+        this.width = this.upper.getBoundingClientRect().width;
         this.counted = false;
     }
     placeLeft(x){
