@@ -111,6 +111,9 @@ function updateScoreBoard() {
         newHigh = true;
         localStorage.highscore = score;
     }
+    else{
+        newHigh = false;
+    }
 }
 
 function scoreboard() {
