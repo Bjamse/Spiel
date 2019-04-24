@@ -1,3 +1,8 @@
+html {
+    font-family: 'Roboto', 'Calibri Light', sans-serif;
+    background-color: lightgray;
+}
+
 h1 {
     text-align: center;
 }
@@ -11,11 +16,11 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: darkgrey;
+    background-color: #ffffff;
 }
 
-#about {
-    float: right;
+li {
+    float: left;
 }
 
 li a {
@@ -23,9 +28,18 @@ li a {
     color: whitesmoke;
     text-align: center;
     text-decoration: none;
-    padding: 15px 20px;
+    padding: 15px 20px 10px 20px;
 }
 
-li a:hover {
-    background-color: grey;
+.meny-item {
+    padding: 25px 0px;
+    float: right;
+}
+
+.meny-item:hover{
+    background-color: #d0d0d0;
+}
+
+#meny {
+    margin: -8px;
 }
