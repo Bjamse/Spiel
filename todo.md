@@ -10,6 +10,7 @@
    - ~~flappy bird~~
    - vanlig ping pong
    - Tre på rad, Tic Tac Toe
+   - 4 på rad
    - finn fem feil
    - gjett hvem/logo/sted
    - quiz
