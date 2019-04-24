@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head><meta charset="UTF-8"></head>
+<style>
+    table, tr, td {
+        border: black solid 10px;
+        border-collapse: collapse;
+        margin: auto;
+    }
+    td {
+        width: 120px;
+        height: 120px;
+    }
+</style>
+<script>
+    function a(x) {
+        alert(x);
+    }
+</script>
+<body>
+    <h1> Tic Tac Toe</h1>
+    <table>
+        <tr><td onclick=a(1) style="border-top-color: white; border-left-color: white;"></td><td onclick=a(2) style="border-top-color: white;"></td><td onclick=a(3) style="border-top-color: white; border-right-color: white;"></td></tr>
+        <tr><td onclick=a(4) style="border-left-color: white;"></td><td onclick=a(5) ></td><td onclick=a(6) style="border-right-color: white;"></td></tr>
+        <tr><td onclick=a(7) style="border-bottom-color: white; border-left-color: white;"></td><td onclick=a(8) style="border-bottom-color: white;"></td><td onclick=a(9) style="border-right-color: white; border-bottom-color: white;"></td></tr>
+    </table>
+</body>
+</html>
