@@ -22,14 +22,18 @@ class Tile {
         this.x += x;
         this.y += y;
 
-        let VLen = document.getElementById("11").getBoundingClientRect().top - document.getElementById("01").getBoundingClientRect().top;
-        let HLen = document.getElementById("11").getBoundingClientRect().left - document.getElementById("10").getBoundingClientRect().left;
+        let lnt = document.getElementById(""+this.y+this.x).getBoundingClientRect().left;
+        let tnt = document.getElementById(""+this.y+this.x).getBoundingClientRect().top;
+
+        let lst = document.getElementById(""+this.starty+this.startx).getBoundingClientRect().left;
+        let tst = document.getElementById(""+this.starty+this.startx).getBoundingClientRect().top;
+
         // Code for Safari
-        this.element.style.WebkitTransform = "translate("+((this.x-this.startx)*HLen)+"px, "+((this.y-this.starty)*VLen)+"px)";
+        this.element.style.WebkitTransform = "translate("+(lnt-lst)+"px, "+(tnt-tst)+"px)";
         // Code for IE9
-        this.element.style.msTransform = "translate("+((this.x-this.startx)*HLen)+"px, "+((this.y-this.starty)*VLen)+"px)";
+        this.element.style.msTransform = "translate("+(lnt-lst)+"px, "+(tnt-tst)+"px)";
         // Standard syntax
-        this.element.style.transform = "translate("+((this.x-this.startx)*HLen)+"px, "+((this.y-this.starty)*VLen)+"px)";
+        this.element.style.transform = "translate("+(lnt-lst)+"px, "+(tnt-tst)+"px)";
 
     }
     increaseScore(){
