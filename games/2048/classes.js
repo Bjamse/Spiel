@@ -45,37 +45,37 @@ class Tile {
 
         switch (this.score) {
             case 2:
-                this.element.style.backgroundColor = "#69ffdf";
+                this.element.style.backgroundColor = "#7CB5E2";
                 break;
             case 4:
-                this.element.style.backgroundColor = "#1b98ff";
+                this.element.style.backgroundColor = "#397FB3";
                 break;
             case 8:
-                this.element.style.backgroundColor = "#274bff";
+                this.element.style.backgroundColor = "#2F6895";
                 break;
             case 16:
-                this.element.style.backgroundColor = "#ffba1e";
+                this.element.style.backgroundColor = "#F5BD70";
                 break;
             case 32:
-                this.element.style.backgroundColor = "#ff9318";
+                this.element.style.backgroundColor = "#F2A032";
                 break;
             case 64:
-                this.element.style.backgroundColor = "#ff7f28";
+                this.element.style.backgroundColor = "#CD8829";
                 break;
             case 128:
                 this.element.style.backgroundColor = "#ff8356";
                 break;
             case 256:
-                this.element.style.backgroundColor = "#ff6d5a";
+                this.element.style.backgroundColor = "#DE5833";
                 break;
             case 512:
-                this.element.style.backgroundColor = "#ff77a9";
+                this.element.style.backgroundColor = "#BD4A2B";
                 break;
             case 1024:
-                this.element.style.backgroundColor = "#ff77e6";
+                this.element.style.backgroundColor = "#5454DA";
                 break;
             case 2048:
-                this.element.style.backgroundColor = "#ce51ff";
+                this.element.style.backgroundColor = "#3B3C99";
                 break;
         }
         this.element.innerHTML = "<h2>"+this.score+"</h2>";
