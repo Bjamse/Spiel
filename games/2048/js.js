@@ -70,7 +70,7 @@ function flyttBrikker(evt) {
         if (rettning === "left"){
             for(let j = brikker[moveOrder[i]].x-1; j >= 0; j--){
                 let tmp = tileAt(j, brikker[moveOrder[i]].y);
-                if(tmp.empty !== true && tmp.score === brikker[moveOrder[i]].score){
+                if(tmp.empty !== true && tmp.score === brikker[moveOrder[i]].score && tmp.score!== 2048){
                     steps++;
                     brikker[moveOrder[i]].increaseScore();
                     removeTileAt(j, brikker[moveOrder[i]].y);
@@ -85,7 +85,7 @@ function flyttBrikker(evt) {
         }else if (rettning === "right"){
             for(let j = brikker[moveOrder[i]].x+1; j <= 3; j++){
                 let tmp = tileAt(j, brikker[moveOrder[i]].y);
-                if(tmp.empty !== true && tmp.score === brikker[moveOrder[i]].score){
+                if(tmp.empty !== true && tmp.score === brikker[moveOrder[i]].score && tmp.score!== 2048){
                     steps++;
                     brikker[moveOrder[i]].increaseScore();
                     removeTileAt(j, brikker[moveOrder[i]].y);
@@ -100,7 +100,7 @@ function flyttBrikker(evt) {
         }else if (rettning === "up"){
             for(let j = brikker[moveOrder[i]].y-1; j >= 0; j--){
                 let tmp = tileAt(brikker[moveOrder[i]].x,j);
-                if(tmp.empty !== true&& tmp.score === brikker[moveOrder[i]].score){
+                if(tmp.empty !== true&& tmp.score === brikker[moveOrder[i]].score && tmp.score!== 2048){
                     steps++;
                     brikker[moveOrder[i]].increaseScore();
                     removeTileAt(brikker[moveOrder[i]].x,j);
@@ -116,7 +116,7 @@ function flyttBrikker(evt) {
         }else if (rettning === "down"){
             for(let j = brikker[moveOrder[i]].y+1; j <= 3; j++){
                 let tmp = tileAt(brikker[moveOrder[i]].x,j);
-                if(tmp.empty !== true && tmp.score === brikker[moveOrder[i]].score){
+                if(tmp.empty !== true && tmp.score === brikker[moveOrder[i]].score && tmp.score!== 2048){
                     steps++;
                     brikker[moveOrder[i]].increaseScore();
                     removeTileAt(brikker[moveOrder[i]].x,j);
