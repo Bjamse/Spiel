@@ -9,6 +9,7 @@
    - ~~one man ping pong~~
    - ~~flappy bird~~
    - ~~2048~~
+   - ~~piano tiles~~
    - vanlig ping pong
    - Tre på rad, Tic Tac Toe
    - 4 på rad
@@ -19,7 +20,4 @@
    - minesweeper
    - shitty mario spill
    - escape room (point and click) :)
-
-
-- forslag:
-   - guitar hero/piano tiles
+   
