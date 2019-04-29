@@ -20,12 +20,16 @@
     }
 </style>
 <script>
+    
     var tur = true; 
+    
+
     function a(x) {
-        if (tur = true) {
-            document.getElementById(x + "").innerHTML = "<img src='circle.png'>";
-        } else {
-            document.getElementById(x + "").innerHTML = "<img src='x.png'>"
+        tur = !tur;
+        if (tur === true) {
+            document.getElementById(x + "").innerHTML = '<img src="x.png">';
+        } else if (tur === false) {
+            document.getElementById(x + "").innerHTML = '<img src="circle.png">';
         }
     }
 </script>
