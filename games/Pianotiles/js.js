@@ -51,7 +51,7 @@ function increaseScore() {
 
     if(score > highscore){
         highscore = score;
-        localStorage.setItem("HighscorePiino", highscore);
+        localStorage.setItem("HighscorePiano", highscore);
     }
     document.getElementById("currentHighScore").innerText = highscore;
 }
