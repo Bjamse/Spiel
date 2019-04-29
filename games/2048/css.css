@@ -1,0 +1,88 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+    background-image: url("blue-lines-geometry-wallpaper-7285-7568-hd-wallpapers.jpg");
+
+}
+h1{
+    font-family: 'Gugi', cursive;
+    font-size: 70pt;
+    margin: 0 auto;
+    text-align: center;
+
+}
+#board {
+    width: 520.4px;
+    height: 520.4px;
+    position: relative;
+    left: 50%;
+    top: 33%;
+    margin: -261px 0 0 -261px;
+    background: lightgray;
+    padding: 3px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    /*table-layout: fixed;*/
+    -webkit-box-shadow: 5px 5px 44px 11px rgba(0,0,0,0.65);
+    -moz-box-shadow: 5px 5px 44px 11px rgba(0,0,0,0.65);
+    box-shadow: 5px 5px 44px 11px rgba(0,0,0,0.65);
+
+}
+
+#board td{
+    background: white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.tile{
+    position: absolute;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    text-align: center;
+    margin: auto;
+    vertical-align: middle;
+    display: table;
+    transition: .1s linear;
+}
+.tile * {
+    display: table-cell;
+    vertical-align: middle;
+    font-family: Verdana;
+}
+#score{
+    position: absolute;
+    bottom: -12%;
+    left: 0;
+    background: lightgray;
+    padding: 3px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 44px 11px rgba(0,0,0,0.65);
+    -moz-box-shadow: 5px 5px 44px 11px rgba(0,0,0,0.65);
+    box-shadow: 5px 5px 44px 11px rgba(0,0,0,0.65);
+    width: 522px;
+
+
+}
+div.button{
+    border: solid black 2px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    width: 30%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: green;
+    cursor: pointer;
+    float: right;
+    text-align: center;
+    margin: 3px;
+    font-family: "Comic Sans MS", fantasy,Serif;
+}

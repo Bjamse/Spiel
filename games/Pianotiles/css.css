@@ -1,0 +1,77 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+    background-image: url("blue-lines-geometry-wallpaper-7285-7568-hd-wallpapers.jpg");
+    background-size: 100%;
+
+}
+
+#wrapper{
+    position: relative;
+    /*background-color: white;*/
+    height: 100%;
+    width: 33%;
+    margin: auto;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    -webkit-box-shadow: 5px 5px 44px 11px rgba(0,0,0,0.65);
+    -moz-box-shadow: 5px 5px 44px 11px rgba(0,0,0,0.65);
+    box-shadow: 5px 5px 44px 11px rgba(0,0,0,0.65);
+    padding: 0 0 0 0;
+    border-collapse: collapse;
+}
+.boardpiece{
+    position: absolute;
+    height: 20%;
+    width: 100%;
+    border-collapse: collapse;
+    padding: 0 0 0 0;
+}
+
+.boardpiece *{
+    /*background: white;*/
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    border-collapse: collapse;
+}
+.tile{
+    background-color: black;
+    transition: color 2s;
+}
+
+#score{
+    position: absolute;
+    bottom: 0;
+    right: 105%;
+    background: lightgray;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;: ;
+    border: solid black 1px;
+    font-size: 20pt;
+    -webkit-box-shadow: 5px 5px 44px 11px rgba(0,0,0,0.65);
+    -moz-box-shadow: 5px 5px 44px 11px rgba(0,0,0,0.65);
+    box-shadow: 5px 5px 44px 11px rgba(0,0,0,0.65);
+    width: 220px;
+}
+.button{
+    border: solid black 2px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: green;
+    cursor: pointer;
+    text-align: center;
+    margin: 3px;
+    font-family: "Comic Sans MS", fantasy,Serif;
+    width: 90%;
+    font-size: inherit;
+}
+button:active{
+    background: #006300;
+}
