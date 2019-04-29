@@ -18,27 +18,63 @@
         margin-left: auto;
         margin-right: auto;
     }
+    #box {
+        width: 25%;
+        height: 250px;
+        border: black solid 1px;
+        position: absolute;
+        margin-left: 37%;
+        margin-right: auto;
+        margin-top: -350px;
+        background-color: black;
+        display: none; 
+    }
 </style>
 <script>
     
-    var tur = true; 
-    
+    var tur = true;
 
     function a(x) {
         tur = !tur;
-        if (tur === true) {
+        if ((tur === true) && (document.getElementById(x + "").innerHTML === "")) {
             document.getElementById(x + "").innerHTML = '<img src="x.png">';
-        } else if (tur === false) {
+        } else if ((tur === false) && (document.getElementById(x + "").innerHTML === "")) {
             document.getElementById(x + "").innerHTML = '<img src="circle.png">';
-        }
+        } // Vannrett X 
+        if (((document.getElementById("1").innerHTML === '<img src="x.png">') && (document.getElementById("2").innerHTML === '<img src="x.png">') && (document.getElementById("3").innerHTML === '<img src="x.png">')) || ((document.getElementById("4").innerHTML === '<img src="x.png">') && (document.getElementById("5").innerHTML === '<img src="x.png">') && (document.getElementById("6").innerHTML === '<img src="x.png">')) || ((document.getElementById("7").innerHTML === '<img src="x.png">') && (document.getElementById("8").innerHTML === '<img src="x.png">') && (document.getElementById("9").innerHTML === '<img src="x.png">')))  {
+            alert("X vant!");
+        } // Loddrett X
+        if (((document.getElementById("1").innerHTML === '<img src="x.png">') && (document.getElementById("4").innerHTML === '<img src="x.png">') && (document.getElementById("7").innerHTML === '<img src="x.png">')) || ((document.getElementById("2").innerHTML === '<img src="x.png">') && (document.getElementById("5").innerHTML === '<img src="x.png">') && (document.getElementById("8").innerHTML === '<img src="x.png">')) || ((document.getElementById("3").innerHTML === '<img src="x.png">') && (document.getElementById("6").innerHTML === '<img src="x.png">') && (document.getElementById("9").innerHTML === '<img src="x.png">')))  {
+            alert("X vant!");
+        } // Skrått X
+        if (((document.getElementById("1").innerHTML === '<img src="x.png">') && (document.getElementById("5").innerHTML === '<img src="x.png">') && (document.getElementById("9").innerHTML === '<img src="x.png">')) || ((document.getElementById("3").innerHTML === '<img src="x.png">') && (document.getElementById("5").innerHTML === '<img src="x.png">') && (document.getElementById("7").innerHTML === '<img src="x.png">')))  {
+            alert("X vant!");
+        } // Vannrett O
+        if (((document.getElementById("1").innerHTML === '<img src="circle.png">') && (document.getElementById("2").innerHTML === '<img src="circle.png">') && (document.getElementById("3").innerHTML === '<img src="circle.png">')) || ((document.getElementById("4").innerHTML === '<img src="circle.png">') && (document.getElementById("5").innerHTML === '<img src="circle.png">') && (document.getElementById("6").innerHTML === '<img src="circle.png">')) || ((document.getElementById("7").innerHTML === '<img src="circle.png">') && (document.getElementById("8").innerHTML === '<img src="circle.png">') && (document.getElementById("9").innerHTML === '<img src="circle.png">')))  {
+            alert("O vant!");
+        } // Loddrett O
+        if (((document.getElementById("1").innerHTML === '<img src="circle.png">') && (document.getElementById("4").innerHTML === '<img src="circle.png">') && (document.getElementById("7").innerHTML === '<img src="circle.png">')) || ((document.getElementById("2").innerHTML === '<img src="circle.png">') && (document.getElementById("5").innerHTML === '<img src="circle.png">') && (document.getElementById("8").innerHTML === '<img src="circle.png">')) || ((document.getElementById("3").innerHTML === '<img src="circle.png">') && (document.getElementById("6").innerHTML === '<img src="circle.png">') && (document.getElementById("9").innerHTML === '<img src="circle.png">')))  {
+            alert("O vant!");
+        } // Skrått O
+        if (((document.getElementById("1").innerHTML === '<img src="circle.png">') && (document.getElementById("5").innerHTML === '<img src="circle.png">') && (document.getElementById("9").innerHTML === '<img src="circle.png">')) || ((document.getElementById("3").innerHTML === '<img src="circle.png">') && (document.getElementById("5").innerHTML === '<img src="circle.png">') && (document.getElementById("7").innerHTML === '<img src="circle.png">')))  {
+            alert("O vant!");
+        }  
     }
+    function reset() {
+        location.reload();
+    }
+
 </script>
 <body>
     <h1> Tic Tac Toe</h1>
-    <table>
-        <tr><td onclick=a(1) id="1" style="border-top-color: white; border-left-color: white;"></td><td onclick=a(2) id="2" style="border-top-color: white;"></td><td onclick=a(3) id="3" style="border-top-color: white; border-right-color: white;"></td></tr>
-        <tr><td onclick=a(4) id="4" style="border-left-color: white;"></td><td onclick=a(5) id="5" ></td><td onclick=a(6) id="6" style="border-right-color: white;"></td></tr>
-        <tr><td onclick=a(7) id="7" style="border-bottom-color: white; border-left-color: white;"></td><td onclick=a(8) id="8" style="border-bottom-color: white;"></td><td onclick=a(9) id="9" style="border-right-color: white; border-bottom-color: white;"></td></tr>
+    <table id="board">
+        <tr><td onclick=a(1) id="1" class="clear" style="border-top-color: white; border-left-color: white;"></td><td onclick=a(2) id="2" class="clear" style="border-top-color: white;"></td><td onclick=a(3) id="3" class="clear" style="border-top-color: white; border-right-color: white;"></td></tr>
+        <tr><td onclick=a(4) id="4" class="clear" style="border-left-color: white;"></td><td onclick=a(5) class="clear" id="5" ></td><td onclick=a(6) id="6" class="clear" style="border-right-color: white;"></td></tr>
+        <tr><td onclick=a(7) id="7" class="clear" style="border-bottom-color: white; border-left-color: white;"></td><td onclick=a(8) id="8" class="clear" style="border-bottom-color: white;"></td><td onclick=a(9) id="9" class="clear" style="border-right-color: white; border-bottom-color: white;"></td></tr>
     </table>
+    <button onclick=reset()> Reset </button>
+    <div id="box">
+        <h2 style="color: white; text-align: center;">Du vant!</h2>
+    </div>
 </body>
 </html>
