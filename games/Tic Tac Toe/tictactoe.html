@@ -1,9 +1,14 @@
 <!DOCTYPE HTML>
 <html>
 <head><meta charset="UTF-8"></head>
+<title>Tic Tac Toe</title>
 <style>
+    body {
+        background-color: #21cfaf;
+        color: white;
+    }
     table, tr, td {
-        border: black solid 10px;
+        border: white solid 10px;
         border-collapse: collapse;
         margin: auto;
     }
@@ -21,29 +26,46 @@
     #box {
         width: 25%;
         height: 55px;
-        border: black solid 5px;
+        border: white solid 5px;
         position: absolute;
-        margin-left: 37%;
+        margin-left: 35.5%;
         margin-right: auto;
-        margin-top: -250px;
-        background-color: white;
+        margin-top: -235px;
+        background-color: #21cfaf;
         display: none; 
         text-align: center;
         border-radius: 10px;
+        color: white;
+        padding: 10px;
     }
     button {
         border-radius: 10px;
         background-color: lightgreen;
-        border: solid black 2px;
+        border: solid white 3px;
         font-size: 20px;
+        color: white;
+        transition: 1s;
+    }
+    button:hover {
+        transform: scale(1.1);
+    }
+    #score {
+        position: absolute;
+        border: solid white 7px;
+        border-radius: 10px;
+        padding: 20px;
+        margin-left: 250px;
+        margin-top: 50px;
+        background-color: lightgreen;
     }
 </style>
 <script>
     
-    
     var enable = false;
     var tall;
     var tur; 
+    var xwin = 0;
+    var owin = 0;
 
     function start() {
         enable = true;
@@ -60,55 +82,89 @@
     function a(x) {
         if (enable === true) {
             tur = !tur;
-            if ((tur === true) && (document.getElementById(x + "").innerHTML === "")) {
+            if (document.getElementById(x + "").innerHTML != "") {
+                tur = !tur;
+            } if ((tur === true) && (document.getElementById(x + "").innerHTML === "")) {
                 document.getElementById(x + "").innerHTML = '<img src="x.png">';
+                document.getElementById(x + "").style.transition = '0.5s';
+                document.getElementById(x + "").style.transform = 'scale(1.3)';
                 document.getElementById("turn").innerHTML = "O sin tur";
             } else if ((tur === false) && (document.getElementById(x + "").innerHTML === "")) {
                 document.getElementById(x + "").innerHTML = '<img src="circle.png">';
+                document.getElementById(x + "").style.transition = '0.5s';
+                document.getElementById(x + "").style.transform = 'scale(1.4)';
                 document.getElementById("turn").innerHTML = "X sin tur";
             } // Vannrett X 
             if (((document.getElementById("1").innerHTML === '<img src="x.png">') && (document.getElementById("2").innerHTML === '<img src="x.png">') && (document.getElementById("3").innerHTML === '<img src="x.png">')) || ((document.getElementById("4").innerHTML === '<img src="x.png">') && (document.getElementById("5").innerHTML === '<img src="x.png">') && (document.getElementById("6").innerHTML === '<img src="x.png">')) || ((document.getElementById("7").innerHTML === '<img src="x.png">') && (document.getElementById("8").innerHTML === '<img src="x.png">') && (document.getElementById("9").innerHTML === '<img src="x.png">')))  {
                 win("X");
                 enable = false;
+                xwin ++; document.getElementById("xscore").innerHTML = "X: " + xwin;
             } // Loddrett X
-            if (((document.getElementById("1").innerHTML === '<img src="x.png">') && (document.getElementById("4").innerHTML === '<img src="x.png">') && (document.getElementById("7").innerHTML === '<img src="x.png">')) || ((document.getElementById("2").innerHTML === '<img src="x.png">') && (document.getElementById("5").innerHTML === '<img src="x.png">') && (document.getElementById("8").innerHTML === '<img src="x.png">')) || ((document.getElementById("3").innerHTML === '<img src="x.png">') && (document.getElementById("6").innerHTML === '<img src="x.png">') && (document.getElementById("9").innerHTML === '<img src="x.png">')))  {
+            else if (((document.getElementById("1").innerHTML === '<img src="x.png">') && (document.getElementById("4").innerHTML === '<img src="x.png">') && (document.getElementById("7").innerHTML === '<img src="x.png">')) || ((document.getElementById("2").innerHTML === '<img src="x.png">') && (document.getElementById("5").innerHTML === '<img src="x.png">') && (document.getElementById("8").innerHTML === '<img src="x.png">')) || ((document.getElementById("3").innerHTML === '<img src="x.png">') && (document.getElementById("6").innerHTML === '<img src="x.png">') && (document.getElementById("9").innerHTML === '<img src="x.png">')))  {
                 win("X");
                 enable = false;
+                xwin ++; document.getElementById("xscore").innerHTML = "X: " + xwin;
             } // Skrått X
-            if (((document.getElementById("1").innerHTML === '<img src="x.png">') && (document.getElementById("5").innerHTML === '<img src="x.png">') && (document.getElementById("9").innerHTML === '<img src="x.png">')) || ((document.getElementById("3").innerHTML === '<img src="x.png">') && (document.getElementById("5").innerHTML === '<img src="x.png">') && (document.getElementById("7").innerHTML === '<img src="x.png">')))  {
+            else if (((document.getElementById("1").innerHTML === '<img src="x.png">') && (document.getElementById("5").innerHTML === '<img src="x.png">') && (document.getElementById("9").innerHTML === '<img src="x.png">')) || ((document.getElementById("3").innerHTML === '<img src="x.png">') && (document.getElementById("5").innerHTML === '<img src="x.png">') && (document.getElementById("7").innerHTML === '<img src="x.png">')))  {
                 win("X");
                 enable = false;
+                xwin ++; document.getElementById("xscore").innerHTML = "X: " + xwin;
             } // Vannrett O
-            if (((document.getElementById("1").innerHTML === '<img src="circle.png">') && (document.getElementById("2").innerHTML === '<img src="circle.png">') && (document.getElementById("3").innerHTML === '<img src="circle.png">')) || ((document.getElementById("4").innerHTML === '<img src="circle.png">') && (document.getElementById("5").innerHTML === '<img src="circle.png">') && (document.getElementById("6").innerHTML === '<img src="circle.png">')) || ((document.getElementById("7").innerHTML === '<img src="circle.png">') && (document.getElementById("8").innerHTML === '<img src="circle.png">') && (document.getElementById("9").innerHTML === '<img src="circle.png">')))  {
+            else if (((document.getElementById("1").innerHTML === '<img src="circle.png">') && (document.getElementById("2").innerHTML === '<img src="circle.png">') && (document.getElementById("3").innerHTML === '<img src="circle.png">')) || ((document.getElementById("4").innerHTML === '<img src="circle.png">') && (document.getElementById("5").innerHTML === '<img src="circle.png">') && (document.getElementById("6").innerHTML === '<img src="circle.png">')) || ((document.getElementById("7").innerHTML === '<img src="circle.png">') && (document.getElementById("8").innerHTML === '<img src="circle.png">') && (document.getElementById("9").innerHTML === '<img src="circle.png">')))  {
                 win("O");
                 enable = false;
+                owin ++; document.getElementById("oscore").innerHTML = "O: " + owin;
             } // Loddrett O
-            if (((document.getElementById("1").innerHTML === '<img src="circle.png">') && (document.getElementById("4").innerHTML === '<img src="circle.png">') && (document.getElementById("7").innerHTML === '<img src="circle.png">')) || ((document.getElementById("2").innerHTML === '<img src="circle.png">') && (document.getElementById("5").innerHTML === '<img src="circle.png">') && (document.getElementById("8").innerHTML === '<img src="circle.png">')) || ((document.getElementById("3").innerHTML === '<img src="circle.png">') && (document.getElementById("6").innerHTML === '<img src="circle.png">') && (document.getElementById("9").innerHTML === '<img src="circle.png">')))  {
+           else  if (((document.getElementById("1").innerHTML === '<img src="circle.png">') && (document.getElementById("4").innerHTML === '<img src="circle.png">') && (document.getElementById("7").innerHTML === '<img src="circle.png">')) || ((document.getElementById("2").innerHTML === '<img src="circle.png">') && (document.getElementById("5").innerHTML === '<img src="circle.png">') && (document.getElementById("8").innerHTML === '<img src="circle.png">')) || ((document.getElementById("3").innerHTML === '<img src="circle.png">') && (document.getElementById("6").innerHTML === '<img src="circle.png">') && (document.getElementById("9").innerHTML === '<img src="circle.png">')))  {
                 win("O");
                 enable = false;
+                owin ++; document.getElementById("oscore").innerHTML = "O: " + owin;
             } // Skrått O
-            if (((document.getElementById("1").innerHTML === '<img src="circle.png">') && (document.getElementById("5").innerHTML === '<img src="circle.png">') && (document.getElementById("9").innerHTML === '<img src="circle.png">')) || ((document.getElementById("3").innerHTML === '<img src="circle.png">') && (document.getElementById("5").innerHTML === '<img src="circle.png">') && (document.getElementById("7").innerHTML === '<img src="circle.png">')))  {
+            else if (((document.getElementById("1").innerHTML === '<img src="circle.png">') && (document.getElementById("5").innerHTML === '<img src="circle.png">') && (document.getElementById("9").innerHTML === '<img src="circle.png">')) || ((document.getElementById("3").innerHTML === '<img src="circle.png">') && (document.getElementById("5").innerHTML === '<img src="circle.png">') && (document.getElementById("7").innerHTML === '<img src="circle.png">')))  {
                 win("O");
                 enable = false;
-            } 
+                owin ++; document.getElementById("oscore").innerHTML = "O: " + owin;
+             // Uavgjort
+            } else if (document.getElementById("1").innerHTML != "" && document.getElementById("2").innerHTML != "" && document.getElementById("3").innerHTML != "" && document.getElementById("4").innerHTML != "" && document.getElementById("5").innerHTML != "" && document.getElementById("6").innerHTML != "" && document.getElementById("7").innerHTML != "" && document.getElementById("8").innerHTML != "" && document.getElementById("9").innerHTML != ""){
+                win("Ingen");
+            }
         } 
         function win(y) {
             document.getElementById("box").style.display = "block";
             document.getElementById("box").style.fontSize = "20px";
-            document.getElementById("box").innerHTML = y + " vant!<br><button onclick=location.reload()>Spill på nytt</button>";
+            document.getElementById("box").innerHTML = y + " vant!<br><button onclick=reset()>Nytt Spill</button>";
         }
-    }
+    }      
+     function reset() {
+            document.getElementById("1").innerHTML = "";
+            document.getElementById("2").innerHTML = "";
+            document.getElementById("3").innerHTML = "";
+            document.getElementById("4").innerHTML = "";
+            document.getElementById("5").innerHTML = "";
+            document.getElementById("6").innerHTML = "";
+            document.getElementById("7").innerHTML = "";
+            document.getElementById("8").innerHTML = "";
+            document.getElementById("9").innerHTML = "";
+            document.getElementById("box").style.display = "none";
+            document.getElementById("turn").innerHTML = "";
+            document.getElementById("startbtn").style.display = "block";
+        }
+    
 </script>
 <body>
-    <h1> Tic Tac Toe</h1>
-    <button onclick=start() id="startbtn"> Start </button>
-    <div id="turn"></div>
+    <h1 style="text-align: center;">Tic Tac Toe</h1>
+    <center><button onclick=start() id="startbtn"> Start </button></center>
+    <h2 id="turn" style="text-align: center;"></h2>
+    <div id="score">
+        <h2> Poeng </h2>
+        <h2 id="xscore">X: 0</h2>
+        <h2 id="oscore">O: 0</h2>
+    </div>
     <table id="board">
-        <tr><td onclick=a(1) id="1" class="clear" style="border-top-color: white; border-left-color: white;"></td><td onclick=a(2) id="2" class="clear" style="border-top-color: white;"></td><td onclick=a(3) id="3" class="clear" style="border-top-color: white; border-right-color: white;"></td></tr>
-        <tr><td onclick=a(4) id="4" class="clear" style="border-left-color: white;"></td><td onclick=a(5) class="clear" id="5" ></td><td onclick=a(6) id="6" class="clear" style="border-right-color: white;"></td></tr>
-        <tr><td onclick=a(7) id="7" class="clear" style="border-bottom-color: white; border-left-color: white;"></td><td onclick=a(8) id="8" class="clear" style="border-bottom-color: white;"></td><td onclick=a(9) id="9" class="clear" style="border-right-color: white; border-bottom-color: white;"></td></tr>
+        <tr><td onclick=a(1) id="1" style="border-top-color: #21cfaf; border-left-color: #21cfaf;"></td><td onclick=a(2) id="2" style="border-top-color: #21cfaf;"></td><td onclick=a(3) id="3" style="border-top-color: #21cfaf; border-right-color: #21cfaf;"></td></tr>
+        <tr><td onclick=a(4) id="4" style="border-left-color: #21cfaf;"></td><td onclick=a(5) id="5" ></td><td onclick=a(6) id="6" style="border-right-color: #21cfaf;"></td></tr>
+        <tr><td onclick=a(7) id="7" style="border-bottom-color: #21cfaf; border-left-color: #21cfaf;"></td><td onclick=a(8) id="8" style="border-bottom-color: #21cfaf;"></td><td onclick=a(9) id="9" style="border-right-color: #21cfaf; border-bottom-color: #21cfaf;"></td></tr>
     </table>
-
     <div id="box"></div>
 </body>
 </html>
