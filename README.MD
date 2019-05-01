@@ -1,1 +1,3 @@
-# Prosjekt for Spill side
+# Game site Group-project
+
+Group project where we code a bunch of games from scratch in plain js
