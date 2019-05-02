@@ -37,6 +37,7 @@
         border-radius: 10px;
         color: white;
         padding: 10px;
+        font-size: 25px;
     }
     button {
         border-radius: 10px;
@@ -131,7 +132,6 @@
         } 
         function win(y) {
             document.getElementById("box").style.display = "block";
-            document.getElementById("box").style.fontSize = "20px";
             document.getElementById("box").innerHTML = y + " vant!<br><button onclick=reset()>Nytt Spill</button>";
         }
     }      
@@ -148,8 +148,8 @@
             document.getElementById("box").style.display = "none";
             document.getElementById("turn").innerHTML = "";
             document.getElementById("startbtn").style.display = "block";
+            enable = false;
         }
-    
 </script>
 <body>
     <h1 style="text-align: center;">Tic Tac Toe</h1>
