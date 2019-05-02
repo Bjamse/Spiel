@@ -90,11 +90,13 @@
                 document.getElementById(x + "").style.transition = '0.5s';
                 document.getElementById(x + "").style.transform = 'scale(1.3)';
                 document.getElementById("turn").innerHTML = "O sin tur";
+                document.getElementById("place").play();
             } else if ((tur === false) && (document.getElementById(x + "").innerHTML === "")) {
                 document.getElementById(x + "").innerHTML = '<img src="circle.png">';
                 document.getElementById(x + "").style.transition = '0.5s';
                 document.getElementById(x + "").style.transform = 'scale(1.4)';
                 document.getElementById("turn").innerHTML = "X sin tur";
+                document.getElementById("place").play();
             } // Vannrett X 
             if (((document.getElementById("1").innerHTML === '<img src="x.png">') && (document.getElementById("2").innerHTML === '<img src="x.png">') && (document.getElementById("3").innerHTML === '<img src="x.png">')) || ((document.getElementById("4").innerHTML === '<img src="x.png">') && (document.getElementById("5").innerHTML === '<img src="x.png">') && (document.getElementById("6").innerHTML === '<img src="x.png">')) || ((document.getElementById("7").innerHTML === '<img src="x.png">') && (document.getElementById("8").innerHTML === '<img src="x.png">') && (document.getElementById("9").innerHTML === '<img src="x.png">')))  {
                 win("X");
@@ -166,5 +168,6 @@
         <tr><td onclick=a(7) id="7" style="border-bottom-color: #21cfaf; border-left-color: #21cfaf;"></td><td onclick=a(8) id="8" style="border-bottom-color: #21cfaf;"></td><td onclick=a(9) id="9" style="border-right-color: #21cfaf; border-bottom-color: #21cfaf;"></td></tr>
     </table>
     <div id="box"></div>
+    <audio id="place"><source src="place.mp3"></audio>
 </body>
 </html>

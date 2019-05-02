@@ -60,7 +60,7 @@
         transition: 0.5s;
     }.valg:hover {
         transform: scale(1.1);
-    }
+    } 
 </style>
 <script>
     var pplayer = 0;
@@ -69,29 +69,68 @@
         var com = tall = Math.floor(Math.random() * Math.floor(3));
         if ((player === 0) && (com === 0)) {
             document.getElementById("resultat").innerHTML = "Rock is equal to rock. It's a draw!";
+            document.getElementById("rborder").style.borderColor = "grey";
+            document.getElementById("rborder").style.boxShadow = "0 0 10px grey";
+            setTimeout(rtilbake,500);
         } else if ((player === 0) && (com ===1)) {
             document.getElementById("resultat").innerHTML = "Rock loses to paper. Computer wins!";
             pcom++; document.getElementById("cscore").innerHTML = pcom;
+            document.getElementById("rborder").style.borderColor = "#e2584d";
+            document.getElementById("rborder").style.boxShadow = "0 0 10px #e2584d";
+            setTimeout(rtilbake,500);
         } else if ((player === 0) && (com ===2)) {
             document.getElementById("resultat").innerHTML = "Rock beats scissors. Player wins!";
             pplayer++; document.getElementById("pscore").innerHTML = pplayer;
+            document.getElementById("rborder").style.borderColor = "lightgreen";
+            document.getElementById("rborder").style.boxShadow = "0 0 10px lightgreen";
+            setTimeout(rtilbake,500);
         } else if ((player === 1) && (com ===0)) {
             document.getElementById("resultat").innerHTML = "Paper beats rock. Player wins!";
             pplayer++; document.getElementById("pscore").innerHTML = pplayer;
+            document.getElementById("pborder").style.borderColor = "lightgreen";
+            document.getElementById("pborder").style.boxShadow = "0 0 10px lightgreen";
+            setTimeout(ptilbake,500);
         } else if ((player === 1) && (com ===1)) {
             document.getElementById("resultat").innerHTML = "Paper is equal to paper. It's a draw!";
+            document.getElementById("pborder").style.borderColor = "grey";
+            document.getElementById("pborder").style.boxShadow = "0 0 10px grey";
+            setTimeout(ptilbake,500);
         } else if ((player === 1) && (com ===2)) {
             document.getElementById("resultat").innerHTML = "Paper loses to scissors. Computer wins!";
             pcom++; document.getElementById("cscore").innerHTML = pcom;
+            document.getElementById("pborder").style.borderColor = "#e2584d";
+            document.getElementById("pborder").style.boxShadow = "0 0 10px #e2584d";
+            setTimeout(ptilbake,500);
         } else if ((player === 2) && (com ===0)) {
             document.getElementById("resultat").innerHTML = "Scissors loses to rock. Computer wins!";
             pcom++; document.getElementById("cscore").innerHTML = pcom;
+            document.getElementById("sborder").style.borderColor = "#e2584d";
+            document.getElementById("sborder").style.boxShadow = "0 0 10px #e2584d";
+            setTimeout(stilbake,500);
         } else if ((player === 2) && (com ===1)) {
             document.getElementById("resultat").innerHTML = "Scissors beats paper. Player wins!";
             pplayer++; document.getElementById("cscore").innerHTML = pplayer;
+            document.getElementById("sborder").style.borderColor = "lightgreen";
+            document.getElementById("sborder").style.boxShadow = "0 0 10px lightgreen";
+            setTimeout(stilbake,500);
         } else if ((player === 2) && (com ===2)) {
             document.getElementById("resultat").innerHTML = "Scissors is equal to scissors. It's a draw!";
+            document.getElementById("sborder").style.borderColor = "grey";
+            document.getElementById("sborder").style.boxShadow = "0 0 10px grey";
+            setTimeout(stilbake,500);
         } 
+        function rtilbake() {
+            document.getElementById("rborder").style.borderColor = "white";
+            document.getElementById("rborder").style.boxShadow = "none";
+        }
+        function ptilbake() {
+            document.getElementById("pborder").style.borderColor = "white";
+            document.getElementById("pborder").style.boxShadow = "none";
+        }
+        function stilbake() {
+            document.getElementById("sborder").style.borderColor = "white";
+            document.getElementById("sborder").style.boxShadow = "none";
+        }
     }
 </script>
 <body>
@@ -103,9 +142,9 @@
     </div>
     <div id="resultat">Make a move to start game!</div>
     <div id="utvalg">
-        <div onclick=a(0) class="valg"><img src="rock.png" id="r"></div>
-        <div onclick=a(1) class="valg"><img src="paper.png" id="p"></div>
-        <div onclick=a(2) class="valg"><img src="scissor.png" id="s"></div>
+        <div id="rborder" onclick=a(0) class="valg"><img src="rock.png" id="r"></div>
+        <div id="pborder" onclick=a(1) class="valg"><img src="paper.png" id="p"></div>
+        <div id="sborder" onclick=a(2) class="valg"><img src="scissor.png" id="s"></div>
     </div>
     <p style="text-align: center">Make Your Move</p>
 </body>
