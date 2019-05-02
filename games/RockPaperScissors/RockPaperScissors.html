@@ -1,0 +1,86 @@
+<html>
+<head><meta charset="utf-8"></head>
+<title>Rock Paper Scissors</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Asap, sans-serif;
+        font-weight: bold;
+    }body {
+        background-color: #292c34;
+        color: white;
+    }#header {
+        background-color: white; 
+        color: #292c34;
+        text-align: center;
+        padding: 20px;
+    }#score {
+        border: solid white 3px;
+        width: 250px;
+        margin: 20px auto;
+        font-size: 45px;
+        border-radius: 10px;
+        text-align: center;
+        padding: 20px;
+        position: relative;
+    }img {
+        width: 100px;
+        height: 100px;
+    }.label {
+        background-color: #e2584d;
+        color: white;
+        font-size: 20px;
+        padding: 5px;
+    }#playerlabel {
+        position: absolute; 
+        top: 25%;
+        left: -50px; 
+        width: 105px;
+        border-radius: 10px;
+    }#comlabel {
+        position: absolute; 
+        top: 25%;
+        right: -50px;
+        width: 105px;
+        border-radius: 10px;
+    }#resultat {
+        text-align: center;
+    }#utvalg {
+        text-align: center;
+        margin: 20px;
+    }.valg {
+        display: inline-block;
+        border: solid white 5px;
+        border-radius: 50%;
+        padding: 10px;
+        margin: 10px;
+        transition: 0.5s;
+    }.valg:hover {
+        transform: scale(1.1);
+    }#move {
+        text-align: center;
+    }
+</style>
+<script>
+    function a(x) {
+        
+    }
+</script>
+<body>
+    <div id="header"><h1>Rock Paper Scissors</h1></div>
+    <div id="score">
+        <div class="label" id="playerlabel">Player</div>
+        <div class="label" id="comlabel">Computer</div>
+        <span id="playerscore">0</span>:<span id="comscore">0</span>
+    </div>
+    <div id="resultat"><h2>Resultat</h2></div>
+    <div id="utvalg">
+        <div onclick=a(0) class="valg"><img src="rock.png" id="r"></div>
+        <div onclick=a(1) class="valg"><img src="rock.png" id="p"></div>
+        <div onclick=a(2) class="valg"><img src="rock.png" id="s"></div>
+    </div>
+    <p id="move">Make Your Move</p>
+</body>
+</html>
