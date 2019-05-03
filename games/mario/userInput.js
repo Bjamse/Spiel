@@ -7,9 +7,7 @@ KEY_CODES = {
 };
 
 KEY_STATUS = {};
-for (code in KEY_CODES) {
-    KEY_STATUS[ KEY_CODES[ code ]] = false;
-}
+for (let code in KEY_CODES) KEY_STATUS[KEY_CODES[parseInt(code)]] = false;
 
 document.onkeydown = function(e) {
     let keyCode = (e.keyCode) ? e.keyCode : e.charCode;

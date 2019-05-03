@@ -19,6 +19,7 @@ h1{
     width: 100%;
 }
 #box{
+    background-color: cornflowerblue;
     position: absolute;
     border: solid black 2px;
     height: 60vh;
