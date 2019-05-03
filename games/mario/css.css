@@ -1,0 +1,46 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url("blue-lines-geometry-wallpaper-7285-7568-hd-wallpapers.jpg");
+    height: 100%;
+    width: 100%;
+
+}
+h1{
+    font-family: 'Gugi', cursive;
+    font-size: 70pt;
+    margin: 0 auto;
+    text-align: center;
+
+}
+#header{
+    position: absolute;
+    width: 100%;
+}
+#box{
+    position: absolute;
+    border: solid black 2px;
+    height: 60vh;
+    width: 60vh;
+    top: 20%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    -webkit-box-shadow: 5px 5px 44px 11px rgba(0,0,0,0.65);
+    -moz-box-shadow: 5px 5px 44px 11px rgba(0,0,0,0.65);
+    box-shadow: 5px 5px 44px 11px rgba(0,0,0,0.65);
+}
+#contentHolder{
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+}
+canvas{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
