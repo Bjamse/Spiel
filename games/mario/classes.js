@@ -19,6 +19,18 @@ class groundBlock extends block{
     }
 }
 
+class Brick extends block{
+    constructor(bx,by){
+        super(bx,by,16,16, true);
+        this.texture = new Image();
+        this.texture.src = "./textures/brick.png";
+
+
+    }
+}
+
+
+
 class Player{
     constructor(x, y){
         this.x = x;

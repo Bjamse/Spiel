@@ -37,6 +37,9 @@ function blockClassifier(string, x, y){
     if(string === "g"){
         return new groundBlock(x,y);
     }
+    if(string === "b"){
+        return new Brick(x,y);
+    }
 }
 
 class BlankMap{
