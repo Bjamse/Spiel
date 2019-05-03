@@ -1,6 +1,3 @@
-// function drawBlock(obj){
-//     wc.drawImage(obj.texture,obj.bx,obj.by)
-// }
 
 function drawWorld(){
     wc.clearRect(0, 0, 256, 256);

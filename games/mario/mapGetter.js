@@ -34,11 +34,21 @@ function statusforandring(){
 
 
 function blockClassifier(string, x, y){
-    if(string === "g"){
-        return new groundBlock(x,y);
-    }
-    if(string === "b"){
-        return new Brick(x,y);
+
+    switch (string) {
+        case "g":
+            return new groundBlock(x,y);
+        case "b":
+            return new Brick(x,y);
+        case "R":
+            return new PipeTopRight(x,y);
+        case "P":
+            return new PipeTopLeft(x,y);
+        case "r":
+            return new PipeMiddleRight(x,y);
+        case "p":
+            return new PipeMiddleLeft(x,y);
+
     }
 }
 

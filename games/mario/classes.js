@@ -28,8 +28,35 @@ class Brick extends block{
 
     }
 }
+class PipeTopRight extends block{
+    constructor(bx,by) {
+        super(bx, by, 16, 16, true);
+        this.texture = new Image();
+        this.texture.src = "./textures/PipeTopR.png";
+    }
+}
 
-
+class PipeTopLeft extends block{
+    constructor(bx,by) {
+        super(bx, by, 16, 16, true);
+        this.texture = new Image();
+        this.texture.src = "./textures/PipeTopL.png";
+    }
+}
+class PipeMiddleRight extends block{
+    constructor(bx,by) {
+        super(bx, by, 16, 16, true);
+        this.texture = new Image();
+        this.texture.src = "./textures/PipeMiddleR.png";
+    }
+}
+class PipeMiddleLeft extends block{
+    constructor(bx,by) {
+        super(bx, by, 16, 16, true);
+        this.texture = new Image();
+        this.texture.src = "./textures/PipeMiddleL.png";
+    }
+}
 
 class Player{
     constructor(x, y){
