@@ -14,9 +14,9 @@
 </div>
 
 <div id="StartMenu" class="menu">
-    <h1>Flappy bird!</h1>
+    <img src="logo.svg" style="width: 300px; height: 60px; margin-top: 50px;">
 
-    <div class="button" onclick="startNewGame();removeElement(document.getElementById('StartMenu'))" style="margin-top: 75px; font-size: 36pt; width: 75%">
+    <div class="button" onclick="startNewGame();removeElement(document.getElementById('StartMenu'))" style="margin-top: 50px; font-size: 36pt; width: 75%;">
         Start
     </div>
     <br>
@@ -29,7 +29,9 @@
 </div>
 
 
-
+<audio id="flap"><source src="flap.mp3"></audio>
+<audio id="die"><source src="die.mp3"></audio>
+<audio id="point"><source src="point.mp3"></audio>
 
 </body>
 </html>

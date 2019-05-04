@@ -36,6 +36,7 @@ function keyPressed(evt) {
     if(evt.keyCode === 32 && !(keyDown)){
         BB.jump();
         keyDown = true;
+        document.getElementById("flap").play();
     }
 }
 
@@ -52,12 +53,12 @@ function moveObjectsOnScreen() {
         }
     }
     document.getElementById("Score").innerText = "Score = "+ score;
-
 }
 
 function collideTubes(){
     for(let i in tubes){
         if(BB.collide(tubes[i].upper) || BB.collide(tubes[i].lower)){
+            document.getElementById("die").play();
             return true
         }
     }
@@ -75,7 +76,7 @@ function makeTube(){
     x.placeLeft(innerWidth + x.upper.getBoundingClientRect().width + 100);
 }
 function removeElementByID(elementId){
-    // Removes an box from the document
+    // Removes a box from the document
     let element = document.getElementById(elementId);
     removeElement(element);
 }
@@ -101,8 +102,7 @@ function endGame() {
     scoreboard();
     score = 0;
     document.getElementById("Score").innerText = "Score = "+ score;
-
-
+    document.getElementById("die").play();
 }
 
 function updateScoreBoard() {
@@ -120,14 +120,14 @@ function scoreboard() {
     let menu = document.createElement("div");
     menu.id = "Scoreboard";
     menu.className = "menu";
-    let table ="<h1>You Died!</h1>";
+    let table ="<h1>Game over!</h1>";
 
     if(newHigh){
         table += "<h3 class='rainbowText'>New Highscore!</h3> <br>";
     }
     table += "<table style='margin: auto; text-align: left'>" +
-        "<tr><td>Score:</td> <td>"+score+"</td></tr>" +
-        "<tr><td>HighScore:</td><td>"+highscore+"</td></tr>" +
+        "<tr><td id='orange'>Score:</td> <td>"+score+"</td></tr>" +
+        "<tr><td id='orange'>HighScore:</td><td>"+highscore+"</td></tr>" +
         "</table>" +
         "<div class='button' onclick='startNewGame();removeElement(document.getElementById(\"Scoreboard\"))'>Again!</div>";
 
@@ -135,4 +135,4 @@ function scoreboard() {
     menu.innerHTML = table;
 
     document.body.appendChild(menu);
-}
+} 

@@ -6,6 +6,8 @@
     body {
         background-color: #21cfaf;
         color: white;
+        font-family: Asap, sans-serif;
+        font-weight: bold;
     }
     table, tr, td {
         border: white solid 10px;
@@ -58,6 +60,10 @@
         margin-left: 250px;
         margin-top: 50px;
         background-color: lightgreen;
+    }
+    p {
+        font-size: 20px;
+        margin-top: -5px;
     }
 </style>
 <script>
@@ -154,9 +160,9 @@
         }
 </script>
 <body>
-    <h1 style="text-align: center;">Tic Tac Toe</h1>
+    <div id="header"><h1 style="text-align: center;">Tic Tac Toe</h1></div><br>
     <center><button onclick=start() id="startbtn"> Start </button></center>
-    <h2 id="turn" style="text-align: center;"></h2>
+    <p id="turn" style="text-align: center;"></p>
     <div id="score">
         <h2> Poeng </h2>
         <h2 id="xscore">X: 0</h2>

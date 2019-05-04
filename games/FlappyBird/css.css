@@ -2,7 +2,7 @@ html, body {
     overflow: hidden;
     font-family: "Comic Sans MS", serif;
     border-spacing: 0;
-    paddding: 0;
+    padding: 0;
     margin: 0;
     all-space-treatment: 0;
 }
@@ -11,12 +11,10 @@ div#birdBox {
     position: absolute;
     /*bare for at  den skal loade på utsiden av skjermmen og så bli flyttet inn senere*/
     left: -300px;
-
 }
-
 div#bird{
-    width: 100%;
-    height: 100%;
+    width: 80px;
+    height: 80px;
     background-image: url("bird.gif");
     background-size: 100%;
 }
@@ -25,9 +23,9 @@ div#floor{
     width: 100%;
     height: 100%;
     top: 95%;
-    background: green;
     z-index: 1;
     border-top: solid black 2px;
+    background-image: url("floor.png");
 }
 
 div.lower, div.upper{
@@ -45,7 +43,7 @@ div.lower{
 
 div.menu{
     position: absolute;
-    background: lightgray;
+    background: #E4D57D;
     border: solid black 3px;
     border-radius: 30px;
     width: 400px;
@@ -58,37 +56,37 @@ div.menu{
 
 }
 div.button{
-    border: solid black 2px;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    border-radius: 30px;
+    border: solid white 3px;
     margin: auto;
     margin-top: 5px;
     width: 40%;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    background-color: green;
+    background-color: #DD6701;
     cursor: pointer;
-
-
+    color: white;
+    margin-bottom: 30px;
 }
 div#Score{
     float: left;
     position: relative;
-    background: white;
+    background: #E4D57D;
     border: solid black 2px;
     padding: 5px;
-
+    color: white;
 }
 div#Scoreboard{
     height: auto;
+    color: white;
 }
 .rainbowText {
     background: red;
-    background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet);
-    background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
-    background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
-    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
+    background: -webkit-linear-gradient(left,red, orange , yellow, green, cyan, blue, violet);
+    background: -o-linear-gradient(right,red, orange, yellow, green, cyan, blue, violet);
+    background: -moz-linear-gradient(right,red, orange, yellow, green, cyan, blue, violet);
+    background: linear-gradient(to right,red,  orange , yellow, green, cyan, blue, violet);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+#orange {
+    color: #DD6701;
 }
