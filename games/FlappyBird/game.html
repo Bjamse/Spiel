@@ -14,9 +14,9 @@
 </div>
 
 <div id="StartMenu" class="menu">
-    <div id="logoplace"><img id="logo" src="logo.svg"></div>
+    <div id="logoplace"><img id="logo" src="logo.svg" alt="Flappy Bird"></div>
 
-    <div class="button" onclick="startNewGame();removeElement(document.getElementById('StartMenu'))" style="margin-top: 50px; font-size: 36pt; width: 75%;">
+    <div class="button" onclick="startNewGame();removeElement(document.getElementById('StartMenu')); clearInterval(loop3)" style="margin-top: 50px; font-size: 36pt; width: 75%;">
         Start
     </div>
     <br>

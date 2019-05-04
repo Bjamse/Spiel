@@ -1,6 +1,7 @@
 let BB; //birdy mc. bird face
 let loop;
 let loop2;
+let loop3; // logo sprett main menue
 let tubes = [];
 let score = 0;
 let scoreLine = 30;
@@ -19,7 +20,7 @@ function boot() {
     }else {
         highscore = 0;
     }
-    setInterval(logo,500)
+    loop3 = setInterval(logo,500)
 }
 
 function startNewGame(){
@@ -138,7 +139,7 @@ function scoreboard() {
     document.body.appendChild(menu);
 } 
 
-var boolean = true;
+let boolean = true;
 function logo() {
     boolean = !boolean;
     if (boolean === false) {

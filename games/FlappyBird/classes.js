@@ -2,9 +2,9 @@ class Bird{
     constructor(box){
         this.box = document.getElementById(box);
         // this.img = this.box.children[0];                 Not in use!
-        this.sides = Math.floor(innerHeight/12);
-        this.box.style.width = (this.sides * (148/122))+"px";
-        this.box.style.height = this.sides+"px";
+        this.sides = Math.floor(innerHeight/14);
+        this.box.style.width = Math.floor(this.sides * (144/122)-1)+"px";
+        this.box.style.height = (this.sides-2)+"px";
         this.box.style.left = "5%";
         this.box.style.top = (innerHeight/2 - this.sides/2)+ "px";
 
