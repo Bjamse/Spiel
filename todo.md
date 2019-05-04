@@ -1,7 +1,7 @@
 # todo
 
 
-- Forside
+- ~~Forside~~
   
   
 - GAMES
@@ -10,8 +10,9 @@
    - ~~flappy bird~~
    - ~~2048~~
    - ~~piano tiles~~
+   - ~~Tre på rad, Tic Tac Toe~~
+   - ~~Stein saks papir~~
    - vanlig ping pong
-   - Tre på rad, Tic Tac Toe
    - 4 på rad
    - finn fem feil
    - gjett hvem/logo/sted
