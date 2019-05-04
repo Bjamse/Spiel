@@ -27,8 +27,6 @@ function newGame() {
     }, delay);
     // plasing a point at random on the screen
     points.push(pp());
-    document.getElementById("music").currentTime = 0;;
-    document.getElementById("music").play();
 }
 
 // place point
@@ -110,7 +108,7 @@ function scoreboard() {
     let menu = document.createElement("div");
     menu.id = "Scoreboard";
     menu.className = "menu";
-    let table ="<h1>Scoreboard</h1>";
+    let table ="<img onclick=musictoggle() id='musicimg' src='musicoff.png'><h1>Scoreboard</h1>";
     if (highscores.length > 0){
         table += "<h4>Player:Score</h4>";
         for(let i in highscores){
@@ -136,5 +134,15 @@ function endGame() {
 
     updateScoreBoard();
     scoreboard();
-    document.getElementById("music").pause();
+}
+var boolean = false;
+function musictoggle() {
+    boolean = !boolean;
+    if (boolean === true) {
+        document.getElementById("music").play();
+        document.getElementById("musicimg").src = "musicon.png";
+    } else if (boolean === false) {
+        document.getElementById("music").pause();
+        document.getElementById("musicimg").src = "musicoff.png";
+    }
 }

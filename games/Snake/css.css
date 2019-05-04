@@ -28,8 +28,6 @@ h1#score{
     text-align: center;
     font-size: 72pt;
     margin: 0;
-
-
 }
 
 div.menu{
@@ -57,10 +55,25 @@ div.button{
     background-color: green;
     cursor: pointer;
 }
+div.button:hover {
+    background-color: #2ED101;
+}
 div#Scoreboard{
     height: 450px;
 }
 table, th, td{
     border: solid black 1px;
     border-collapse: collapse;
+}
+#musicimg {
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    left: 2%;
+    top: 5%;
+}
+#logo {
+    width: 200px;
+    height: 50px;
+    padding: 20px;
 }
