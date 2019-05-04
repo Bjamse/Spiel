@@ -19,6 +19,7 @@ function boot() {
     }else {
         highscore = 0;
     }
+    setInterval(logo,500)
 }
 
 function startNewGame(){
@@ -86,7 +87,6 @@ function removeElement(element) {
 function addScore() {document.getElementById("floor").innerHTML = "<div id = 'Score'></div>";}
 
 
-
 function endGame() {
     clearInterval(loop);
     clearInterval(loop2);
@@ -137,3 +137,13 @@ function scoreboard() {
 
     document.body.appendChild(menu);
 } 
+
+var boolean = true;
+function logo() {
+    boolean = !boolean;
+    if (boolean === false) {
+        document.getElementById("logoplace").style.top = "-5px";
+    } else if (boolean === true) {
+        document.getElementById("logoplace").style.top = "0px";
+    }
+}

@@ -13,8 +13,8 @@ div#birdBox {
     left: -300px;
 }
 div#bird{
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     background-image: url("bird.gif");
     background-size: 100%;
 }
@@ -24,7 +24,6 @@ div#floor{
     height: 100%;
     top: 95%;
     z-index: 1;
-    border-top: solid black 2px;
     background-image: url("floor.png");
 }
 
@@ -65,6 +64,9 @@ div.button{
     color: white;
     margin-bottom: 30px;
 }
+div.button:hover {
+    background-color: #DEA128;
+}
 div#Score{
     position: relative;
     color: white;
@@ -88,7 +90,15 @@ div#Scoreboard{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
 #orange {
     color: #DD6701;
+}
+#logo {
+    width: 300px; 
+    height: 60px; 
+    margin-top: 50px;
+}
+#logoplace {
+    position: relative;
+    top: 0px;
 }
