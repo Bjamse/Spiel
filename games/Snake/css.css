@@ -35,7 +35,7 @@ h1#score{
 div.menu{
     position: absolute;
     background: #F85050;
-    border: solid white 3px;
+    border: solid white 5px;
     border-radius: 30px;
     width: 400px;
     height: 300px;
