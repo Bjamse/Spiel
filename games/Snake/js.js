@@ -27,6 +27,8 @@ function newGame() {
     }, delay);
     // plasing a point at random on the screen
     points.push(pp());
+    document.getElementById("music").currentTime = 0;;
+    document.getElementById("music").play();
 }
 
 // place point
@@ -134,6 +136,5 @@ function endGame() {
 
     updateScoreBoard();
     scoreboard();
-
-
+    document.getElementById("music").pause();
 }
