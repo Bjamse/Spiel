@@ -145,8 +145,4 @@ function musictoggle() {
         document.getElementById("music").pause();
         document.getElementById("musicimg").src = "musicoff.png";
     }
-    if (document.getElementById("music").currentTime > 110) {
-        document.getElementById("music").currentTime = 0;
-        document.getElementById("music").play();
-    }
 }
