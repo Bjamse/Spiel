@@ -68,53 +68,53 @@
     function a(player) {
         var com = tall = Math.floor(Math.random() * Math.floor(3));
         if ((player === 0) && (com === 0)) {
-            document.getElementById("resultat").innerHTML = "Rock is equal to rock. It's a draw!";
+            document.getElementById("resultat").innerHTML = "Stein er lik stein. Det er uavgjort!";
             document.getElementById("rborder").style.borderColor = "grey";
             document.getElementById("rborder").style.boxShadow = "0 0 10px grey";
             setTimeout(rtilbake,500);
         } else if ((player === 0) && (com ===1)) {
-            document.getElementById("resultat").innerHTML = "Rock loses to paper. Computer wins!";
+            document.getElementById("resultat").innerHTML = "Stein taper mot papir. Dataen vinner!";
             pcom++; document.getElementById("cscore").innerHTML = pcom;
             document.getElementById("rborder").style.borderColor = "#e2584d";
             document.getElementById("rborder").style.boxShadow = "0 0 10px #e2584d";
             setTimeout(rtilbake,500);
         } else if ((player === 0) && (com ===2)) {
-            document.getElementById("resultat").innerHTML = "Rock beats scissors. Player wins!";
+            document.getElementById("resultat").innerHTML = "Stein slår saks. Du vinner!";
             pplayer++; document.getElementById("pscore").innerHTML = pplayer;
             document.getElementById("rborder").style.borderColor = "lightgreen";
             document.getElementById("rborder").style.boxShadow = "0 0 10px lightgreen";
             setTimeout(rtilbake,500);
         } else if ((player === 1) && (com ===0)) {
-            document.getElementById("resultat").innerHTML = "Paper beats rock. Player wins!";
+            document.getElementById("resultat").innerHTML = "Papir slår stein. Du vinner!";
             pplayer++; document.getElementById("pscore").innerHTML = pplayer;
             document.getElementById("pborder").style.borderColor = "lightgreen";
             document.getElementById("pborder").style.boxShadow = "0 0 10px lightgreen";
             setTimeout(ptilbake,500);
         } else if ((player === 1) && (com ===1)) {
-            document.getElementById("resultat").innerHTML = "Paper is equal to paper. It's a draw!";
+            document.getElementById("resultat").innerHTML = "Papir er lik papir. Det er uavgjort!";
             document.getElementById("pborder").style.borderColor = "grey";
             document.getElementById("pborder").style.boxShadow = "0 0 10px grey";
             setTimeout(ptilbake,500);
         } else if ((player === 1) && (com ===2)) {
-            document.getElementById("resultat").innerHTML = "Paper loses to scissors. Computer wins!";
+            document.getElementById("resultat").innerHTML = "Papir taper mot saks. Dataen vinner!";
             pcom++; document.getElementById("cscore").innerHTML = pcom;
             document.getElementById("pborder").style.borderColor = "#e2584d";
             document.getElementById("pborder").style.boxShadow = "0 0 10px #e2584d";
             setTimeout(ptilbake,500);
         } else if ((player === 2) && (com ===0)) {
-            document.getElementById("resultat").innerHTML = "Scissors loses to rock. Computer wins!";
+            document.getElementById("resultat").innerHTML = "Saks taper mot stein. Dataen vinner!";
             pcom++; document.getElementById("cscore").innerHTML = pcom;
             document.getElementById("sborder").style.borderColor = "#e2584d";
             document.getElementById("sborder").style.boxShadow = "0 0 10px #e2584d";
             setTimeout(stilbake,500);
         } else if ((player === 2) && (com ===1)) {
-            document.getElementById("resultat").innerHTML = "Scissors beats paper. Player wins!";
+            document.getElementById("resultat").innerHTML = "Saks slår papir. Du vinner!";
             pplayer++; document.getElementById("cscore").innerHTML = pplayer;
             document.getElementById("sborder").style.borderColor = "lightgreen";
             document.getElementById("sborder").style.boxShadow = "0 0 10px lightgreen";
             setTimeout(stilbake,500);
         } else if ((player === 2) && (com ===2)) {
-            document.getElementById("resultat").innerHTML = "Scissors is equal to scissors. It's a draw!";
+            document.getElementById("resultat").innerHTML = "Saks er lik saks. Det er uavgjort!";
             document.getElementById("sborder").style.borderColor = "grey";
             document.getElementById("sborder").style.boxShadow = "0 0 10px grey";
             setTimeout(stilbake,500);
@@ -134,18 +134,18 @@
     }
 </script>
 <body>
-    <div id="header"><h1>Rock Paper Scissors</h1></div>
+    <div id="header"><h1>Stein saks papir</h1></div>
     <div id="score">
-        <div class="label" id="playerlabel">Player</div>
-        <div class="label" id="comlabel">Computer</div>
+        <div class="label" id="playerlabel">Deg</div>
+        <div class="label" id="comlabel">Dataen</div>
         <span id="pscore">0</span> : <span id="cscore">0</span>
     </div>
-    <div id="resultat">Make a move to start game!</div>
+    <div id="resultat">Trykk på et av bildene nedenfor for å starte spillet!</div>
     <div id="utvalg">
         <div id="rborder" onclick=a(0) class="valg"><img src="rock.png" id="r"></div>
         <div id="pborder" onclick=a(1) class="valg"><img src="paper.png" id="p"></div>
         <div id="sborder" onclick=a(2) class="valg"><img src="scissor.png" id="s"></div>
     </div>
-    <p style="text-align: center">Make Your Move</p>
+    <p style="text-align: center">Gjør ditt trekk</p>
 </body>
 </html>
