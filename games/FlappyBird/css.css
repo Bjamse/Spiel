@@ -66,12 +66,14 @@ div.button{
     margin-bottom: 30px;
 }
 div#Score{
-    float: left;
     position: relative;
-    background: #E4D57D;
-    border: solid black 2px;
-    padding: 5px;
     color: white;
+    left: 47.5%;
+    top: -75%;
+    width: 10%;
+    font-size: 50px;
+    text-shadow: 2px 2px 0px  black, -2px -2px 0px  black, 2px -2px 0px  black, -2px 2px 0px  black;
+    font-family: Impact, Charcoal, sans-serif;
 }
 div#Scoreboard{
     height: auto;

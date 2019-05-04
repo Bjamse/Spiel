@@ -52,7 +52,7 @@ function moveObjectsOnScreen() {
             tubes.splice(i,1);
         }
     }
-    document.getElementById("Score").innerText = "Score = "+ score;
+    document.getElementById("Score").innerText = score;
 }
 
 function collideTubes(){
@@ -101,8 +101,9 @@ function endGame() {
     updateScoreBoard();
     scoreboard();
     score = 0;
-    document.getElementById("Score").innerText = "Score = "+ score;
+    document.getElementById("Score").innerText = score;
     document.getElementById("die").play();
+    document.getElementById("Score").style.display = "none";
 }
 
 function updateScoreBoard() {

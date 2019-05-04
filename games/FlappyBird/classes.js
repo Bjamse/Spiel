@@ -88,6 +88,7 @@ class Tube{
         if(l <= scoreLine && !(this.counted)){
             this.counted = true;
             score ++;
+            document.getElementById("point").play();
         }
         return l + this.width + 30 < 0;
     }
