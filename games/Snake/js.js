@@ -10,6 +10,7 @@ let highscores = [];
 function boot() {
     // if highscore exists in localstorage, set it
     if(localStorage.highscores !== undefined){highscores = JSON.parse(localStorage.highscores);}
+    musictoggle();
 }
 
 function newGame() {
@@ -135,7 +136,7 @@ function endGame() {
     updateScoreBoard();
     scoreboard();
 }
-var boolean = false;
+var boolean = true;
 function musictoggle() {
     boolean = !boolean;
     if (boolean === true) {
