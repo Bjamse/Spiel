@@ -6,6 +6,8 @@ html, body{
     overflow: hidden;
     border-spacing: 0;
     all-space-treatment: 0;
+    background-color: #92FB73;
+    color: white;
 }
 
 .piece{
@@ -13,8 +15,6 @@ html, body{
     width: 30px;
     height: 30px;
     position: absolute;
-
-
 }
 #head{
     background-image: url("snakeHead.png");
@@ -34,8 +34,8 @@ h1#score{
 
 div.menu{
     position: absolute;
-    background: lightgray;
-    border: solid black 3px;
+    background: #F85050;
+    border: solid white 3px;
     border-radius: 30px;
     width: 400px;
     height: 300px;
@@ -44,21 +44,18 @@ div.menu{
     left: 50%;
     text-align: center;
     font-family: "Comic Sans MS",fantasy;
-
 }
 div.button{
-    border: solid black 2px;
+    border: solid white 2px;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     border-radius: 30px;
     margin: auto;
     width: 40%;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-color: green;
     cursor: pointer;
-    
-
 }
 div#Scoreboard{
     height: 450px;

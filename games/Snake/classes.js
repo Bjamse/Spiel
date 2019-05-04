@@ -51,6 +51,9 @@ class Snake{
             removeElementByID(points[tmpCollideid].id);
             points.pop(tmpCollideid);
             points.push(pp());
+            document.getElementById("bite").pause();
+            document.getElementById("bite").currentTime = 0;
+            document.getElementById("bite").play();
         }
 
 

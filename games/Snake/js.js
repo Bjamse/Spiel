@@ -34,13 +34,12 @@ function pp(){
     let date = new Date();
     let tmp = document.createElement("div");
     tmp.className = "piece";
-    tmp.style.backgroundColor = "black";
+    tmp.style.backgroundColor = "#F85050";
     tmp.style.borderRadius = "100%";
     document.body.appendChild(tmp);
     tmp.style.left = Math.floor(Math.random() * (window.innerWidth-tmp.getBoundingClientRect().width)) + "px";
     tmp.style.top = Math.floor(Math.random() * (window.innerHeight-tmp.getBoundingClientRect().height)) + "px";
     tmp.id = date.getTime();
-
     return tmp
 }
 
@@ -118,7 +117,7 @@ function scoreboard() {
     }else {
         table += "<h2>no highscores saved</h2>"
     }
-    table += "<div class='button' onclick='newGame();removeElement(document.getElementById(\"Scoreboard\"))'>New Game</div>" +
+    table += "<br><div class='button' onclick='newGame();removeElement(document.getElementById(\"Scoreboard\"))'>New Game</div><br>" +
         "<div class='button' onclick='window.close()'>Quit</div>";
 
     menu.innerHTML = table;
