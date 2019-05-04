@@ -65,7 +65,7 @@ div.button{
     margin-bottom: 30px;
 }
 div.button:hover {
-    background-color: #DEA128;
+    background-color: #F78700;
 }
 div#Score{
     position: relative;
