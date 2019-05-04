@@ -80,7 +80,7 @@ class Player{
         pc.clearRect(this.x, this.y, 12, 12);
 
         if(KEY_STATUS["space"]&& this.onTheGround){
-            this.yspeed = -13;
+            this.yspeed = -9;
             this.onTheGround = false;
         }
         if(KEY_STATUS["left"]){

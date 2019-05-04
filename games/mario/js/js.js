@@ -7,7 +7,7 @@ let leftscroll = 0;
 
 let doneLoading =false;
 let loadloop;
-let player =  new Player(22,22);
+let player =  new Player(22,64);
 
 function boot() {
     world = document.getElementById("world");
@@ -27,13 +27,6 @@ function startup() { //hvis det er no mer som skal gjøres før vi starter anima
     animate();// fjern hvis ubrukelig
 }
 
-// _____________________________________________________________________
-/**
- * The animation loop. Calls the requestAnimationFrame shim to
- * optimize the game loop and draws all game objects. This
- * function must be a gobal function and cannot be within an
- * object.
- */
 function animate() {
     requestAnimFrame( animate );
 
@@ -43,18 +36,13 @@ function animate() {
 
 
 }
-/**
- * requestAnim shim layer by Paul Irish
- * Finds the first API that works to optimize the animation loop,
- * otherwise defaults to setTimeout().
- */
 window.requestAnimFrame = (function(){
     return  window.requestAnimationFrame   ||
         window.webkitRequestAnimationFrame ||
         window.mozRequestAnimationFrame    ||
         window.oRequestAnimationFrame      ||
         window.msRequestAnimationFrame     ||
-        function(/* function */ callback, /* DOMElement */ element){
+        function(/* function */ callback,){
             window.setTimeout(callback, 1000 / 60);
         };
 })();
