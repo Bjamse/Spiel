@@ -64,3 +64,10 @@ table, th, td{
     border: solid black 1px;
     border-collapse: collapse;
 }
+#musicimg {
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    left: 2%;
+    top: 5%;
+}
