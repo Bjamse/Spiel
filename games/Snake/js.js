@@ -10,7 +10,6 @@ let highscores = [];
 function boot() {
     // if highscore exists in localstorage, set it
     if(localStorage.highscores !== undefined){highscores = JSON.parse(localStorage.highscores);}
-    musictoggle();
 }
 
 function newGame() {
@@ -136,7 +135,7 @@ function endGame() {
     updateScoreBoard();
     scoreboard();
 }
-var boolean = true;
+var boolean = false;
 function musictoggle() {
     boolean = !boolean;
     if (boolean === true) {
@@ -146,7 +145,7 @@ function musictoggle() {
         document.getElementById("music").pause();
         document.getElementById("musicimg").src = "musicoff.png";
     }
-    if (document.getElementById("music").currentTime > 120) {
+    if (document.getElementById("music").currentTime > 110) {
         document.getElementById("music").currentTime = 0;
         document.getElementById("music").play();
     }
