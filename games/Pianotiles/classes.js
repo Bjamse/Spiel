@@ -1,30 +1,36 @@
-// <table id="boardpiece"><tr><td></td><td></td><td></td><td></td></tr></table>
+class Row {
+    constructor(y){
 
-class Row{
-    constructor(StartPercent){
-        this.element = document.createElement("table");
-        this.element.className = "boardpiece";
-        this.element.id = sudorandom();
-        this.row = this.element.insertRow(0);
-        this.cells = [this.row.insertCell(0),this.row.insertCell(1),this.row.insertCell(2), this.row.insertCell(3)];
-        this.blackTile = this.cells[Math.floor(Math.random()*4)];
-        this.blackTile.className = "tile";
-        this.bottomPercent = StartPercent;
-        this.element.style.bottom = this.bottomPercent+"%";
-        this.notCounted = true;
-        document.getElementById("wrapper").appendChild(this.element);
-
+        this.tiles = [new tile(0,y), new tile(250,y), new tile(500,y), new tile(750,y)];
+        this.black = this.tiles[Math.floor(Math.random()*4)];
+        this.black.black = true;
+    }
+    draw(){
+        for(let i in this.tiles){
+            this.tiles[i].draw();
+        }
     }
     move(){
-        if( this.bottomPercent < -20 && this.blackTile.style.backgroundColor !== "gray"){
-            this.blackTile.style.backgroundColor ="red";
-            clearInterval(loop);
-            scrollAllUP();
-        }else if(this.bottomPercent < -20){
-            replaceMe(this);
-            return
+        for(let k in this.tiles){
+            this.tiles[k].y += speed;
         }
-        this.bottomPercent -= speed;
-        this.element.style.bottom = this.bottomPercent+ "%";
+    }
+}
+
+class tile {
+    constructor(x,y){
+        this.x= x;
+        this.y= y;
+        this.black = false;
+        this.color = "black";
+    }
+    draw(){
+
+        if(this.black){
+            cc.beginPath();
+            cc.fillStyle = this.color;
+            cc.rect(this.x, this.y, 250, 200);
+            cc.fill()
+        }
     }
 }

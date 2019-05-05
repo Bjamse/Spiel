@@ -22,24 +22,9 @@ html, body {
     padding: 0 0 0 0;
     border-collapse: collapse;
 }
-.boardpiece{
-    position: absolute;
-    height: 20%;
+canvas{
     width: 100%;
-    border-collapse: collapse;
-    padding: 0 0 0 0;
-}
-
-.boardpiece *{
-    /*background: white;*/
-    margin: 0;
-    padding: 0;
-    width: 25%;
-    border-collapse: collapse;
-}
-.tile{
-    background-color: black;
-    transition: color 2s;
+    height: 100%;
 }
 
 #score{
