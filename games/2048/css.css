@@ -68,21 +68,29 @@ h1{
     -moz-box-shadow: 5px 5px 44px 11px rgba(0,0,0,0.65);
     box-shadow: 5px 5px 44px 11px rgba(0,0,0,0.65);
     width: 522px;
-
-
+    color: white;
+    font-size: 20px;
+    text-shadow: 1px 1px 0  black, -1px -1px 0 black, 1px -1px 0  black, -1px 1px 0  black;
+    font-family: "Comic Sans MS", fantasy,Serif;
 }
 div.button{
-    border: solid black 2px;
+    border: solid white 2px;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     border-radius: 30px;
     width: 30%;
     padding-top: 5px;
     padding-bottom: 5px;
-    background-color: green;
+    background-color: #3B3C99;
     cursor: pointer;
     float: right;
     text-align: center;
     margin: 3px;
     font-family: "Comic Sans MS", fantasy,Serif;
+    color: white;
+    box-shadow: 0 5px #999;
 }
+div.button:active {
+    box-shadow: 0 3px #666;
+    transform: translateY(2px);
+  }

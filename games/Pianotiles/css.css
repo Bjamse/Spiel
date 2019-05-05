@@ -21,6 +21,7 @@ html, body {
     box-shadow: 5px 5px 44px 11px rgba(0,0,0,0.65);
     padding: 0 0 0 0;
     border-collapse: collapse;
+    background-color: white;
 }
 canvas{
     width: 100%;
@@ -31,10 +32,10 @@ canvas{
     position: absolute;
     bottom: 0;
     right: 105%;
-    background: lightgray;
+    background: white;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    border-radius: 5px;: ;
+    border-radius: 5px;
     border: solid black 1px;
     font-size: 20pt;
     -webkit-box-shadow: 5px 5px 44px 11px rgba(0,0,0,0.65);
@@ -49,14 +50,17 @@ canvas{
     border-radius: 30px;
     padding-top: 5px;
     padding-bottom: 5px;
-    background-color: green;
+    background-color: black;
     cursor: pointer;
     text-align: center;
     margin: 3px;
     font-family: "Comic Sans MS", fantasy,Serif;
     width: 90%;
     font-size: inherit;
+    color: white;
+    box-shadow: 0 5px #999;
 }
-button:active{
-    background: #006300;
-}
+.button:active {
+    box-shadow: 0 3px #666;
+    transform: translateY(2px);
+  } 

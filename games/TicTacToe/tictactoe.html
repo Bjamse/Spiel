@@ -28,7 +28,7 @@
     }
     #box {
         width: 25%;
-        height: 55px;
+        height: 60px;
         border: white solid 5px;
         position: absolute;
         margin-left: 35.5%;
@@ -48,11 +48,12 @@
         border: solid white 3px;
         font-size: 20px;
         color: white;
-        transition: 1s;
+        box-shadow: 0 5px #999;
     }
-    button:hover {
-        transform: scale(1.1);
-    }
+    button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
     #score {
         position: absolute;
         border: solid white 7px;

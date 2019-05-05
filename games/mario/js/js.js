@@ -48,3 +48,14 @@ window.requestAnimFrame = (function(){
             window.setTimeout(callback, 1000 / 60);
         };
 })();
+var boolean = false;
+function musictoggle() {
+    boolean = !boolean;
+    if (boolean === true) {
+        document.getElementById("music").play();
+        document.getElementById("musicimg").src = "musicon.png";
+    } else if (boolean === false) {
+        document.getElementById("music").pause();
+        document.getElementById("musicimg").src = "musicoff.png";
+    }
+}

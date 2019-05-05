@@ -54,10 +54,11 @@ h1 {
 }
 
 .spill {
-    border: 1px solid black;
+    border: 2px solid grey;
     border-radius: 5px;
     padding: 10px 30px;
     text-align: center;
+    transition: 0.5s;
 }
 
 table{
@@ -73,4 +74,7 @@ table{
 .spill > a{
     text-decoration: none;
     font-size: 30px;
+}
+td:hover {
+    transform: scale(1.1);
 }

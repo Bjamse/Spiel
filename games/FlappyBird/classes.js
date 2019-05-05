@@ -33,6 +33,8 @@ class Bird{
         if(this.box.getBoundingClientRect().top > -10){
             this.speed = this.jumpHeight;
         }
+        document.getElementById("flap").currentTime = 0;
+        document.getElementById("flap").play();
     }
 
     collide(x){

@@ -37,6 +37,7 @@ function loopBallMotion(){
         // ergo den ville ikke flytta å seg...
 
         poeng +=1 // teller opp poeng.
+
     }
 
     ball.style.left = Number(ballR.left + v[0]) + "px"; // oppdaterer posisjonen til ballen mtp nåværende plassering og fart
@@ -60,4 +61,5 @@ function mouseMove(evt) { // en funksjon som blir kjørt hver gang musa beveger 
 function endGame() { // en liten funksjon for å avslutte spillet. her kan det legges til  emr men jeg er lat...
     clearInterval(loop);// stopper loopen. går kun fordi vi definerte loopen i en variabel
     alert("du tapte!");// skriv i en pop opp boks at du tapte...
+    document.location.reload();
 }

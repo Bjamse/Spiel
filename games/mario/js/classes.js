@@ -114,8 +114,6 @@ class Player{
 
         this.texture = new Image();
         this.texture.src = "./textures/player.png";
-
-
     }
 
 
