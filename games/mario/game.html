@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="icon" href="icon.png">
 <head>
     <meta charset="UTF-8">
-    <title>mario</title>
+    <title>Mario</title>
     <link rel="stylesheet" href="css.css">
     <script src="js/classes.js"></script>
     <script src="js/mapGetter.js"></script>
@@ -21,6 +22,7 @@
         <canvas width="256" height="256" id="player"></canvas>
     </div>
 </div>
-
+<img  id="musicimg" src="musicoff.png" onclick=musictoggle()>
+<audio id="music" controls loop style="display: none;"><source src="music.mp3"></audio>
 </body>
 </html>

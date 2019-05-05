@@ -38,6 +38,7 @@ function keyPressed(evt) {
     if(evt.keyCode === 32 && !(keyDown)){
         BB.jump();
         keyDown = true;
+        document.getElementById("flap").currentTime = 0;
         document.getElementById("flap").play();
     }
 }
