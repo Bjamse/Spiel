@@ -113,7 +113,7 @@ class Player{
         this.onTheGround = false;
 
         this.texture = new Image();
-        this.texture.src = "./textures/player.png";
+        this.texture.src = "./textures/playerright.png";
 
 
     }
