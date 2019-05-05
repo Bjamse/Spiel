@@ -37,6 +37,7 @@ function loopBallMotion(){
         // ergo den ville ikke flytta å seg...
 
         poeng +=1 // teller opp poeng.
+
     }
 
     ball.style.left = Number(ballR.left + v[0]) + "px"; // oppdaterer posisjonen til ballen mtp nåværende plassering og fart

@@ -20,7 +20,7 @@ function boot() {
     }else {
         highscore = 0;
     }
-    loop3 = setInterval(logo,500)
+    loop3 = setInterval(logo,500);
 }
 
 function startNewGame(){
