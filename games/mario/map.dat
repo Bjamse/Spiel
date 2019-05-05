@@ -4,12 +4,12 @@ g
 g
 g
 g  b
-g  b
+g  b  b
 g  b
 g
 g
-gpP
-grR
+gpP c
+grR c
 g
 g
 g
@@ -30,7 +30,7 @@ g
 g
 g
 g    bbbbb
-g    b b b
+g    bcbcb
 g     b b
 g
 g      b
@@ -82,14 +82,14 @@ g
 g
 g
 g
-g
-g
-g
-g
-g
-g
-g
-g
+gc
+gcc
+gccc
+gcc
+gcc
+gc
+gccc
+gcc
 g
 g
 g

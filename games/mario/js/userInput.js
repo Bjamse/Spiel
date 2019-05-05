@@ -4,6 +4,10 @@ KEY_CODES = {
     38: 'up',
     39: 'right',
     40: 'down',
+    68: 'D',
+    65: 'A',
+    83: 'S',
+    87: 'W'
 };
 
 KEY_STATUS = {};

@@ -4,10 +4,11 @@ let wc;
 let pcanvas;
 let pc;
 let leftscroll = 0;
-
 let doneLoading =false;
 let loadloop;
 let player =  new Player(22,64);
+
+let score = 0;
 
 function boot() {
     world = document.getElementById("world");
@@ -18,13 +19,13 @@ function boot() {
     loadloop = setInterval(function () {
        if(doneLoading){
            clearInterval(loadloop);
-           startup();
+           animate();
        }
     },200);
 }
 
-function startup() { //hvis det er no mer som skal gjøres før vi starter animasjonen og etter at alt er lasta inn så gjør det her
-    animate();// fjern hvis ubrukelig
+function updateScore(){
+    document.getElementById("score").innerHTML = score +"";
 }
 
 function animate() {
@@ -32,6 +33,7 @@ function animate() {
 
     drawWorld();
     player.draw();
+    updateScore();
 
 
 

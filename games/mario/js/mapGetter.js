@@ -48,27 +48,12 @@ function blockClassifier(string, x, y){
             return new PipeMiddleRight(x,y);
         case "p":
             return new PipeMiddleLeft(x,y);
-
+        case "c":
+            return new coin(x,y);
     }
 }
 
-class BlankMap{
-    constructor(data){
-        // making a 2d array of objects === to what letter is in mapp raw data
-        this.grid = [];
-        for(let i in data){
-            for(let j in data[i]) {
-                 if(typeof this.grid[i] === "undefined"){
-                     this.grid[i] = [];
-                 }
-                 this.grid[i][j] = blockClassifier(data[i][j], i, j)
 
-            }
-
-        }
-
-    }
-}
 
 
 
