@@ -113,10 +113,7 @@ class Player{
         this.onTheGround = false;
 
         this.texture = new Image();
-        this.texture.src = "./textures/playerright.png";
-        this.texture.style.width = "24%";
-        this.texture.style.width = "32%";
-
+        this.texture.src = "./textures/player.png";
     }
 
 
