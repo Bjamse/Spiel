@@ -117,8 +117,7 @@ function scoreboard() {
     }else {
         table += "<h2>no highscores saved</h2>"
     }
-    table += "<br><div class='button' onclick='newGame();removeElement(document.getElementById(\"Scoreboard\"))'>New Game</div><br>" +
-        "<div class='button' onclick='window.close()'>Quit</div>";
+    table += "<br><div class='button' onclick='newGame();removeElement(document.getElementById(\"Scoreboard\"))'>New Game</div><br>";
 
     menu.innerHTML = table;
 
