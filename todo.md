@@ -12,11 +12,11 @@
    - ~~piano tiles~~
    - ~~Tre på rad, Tic Tac Toe~~
    - ~~Stein saks papir~~
+   - space invaders
    - vanlig ping pong
    - 4 på rad
    - finn fem feil
    - gjett hvem/logo/sted
-   - quiz
    - tetris
    - minesweeper
    - shitty mario spill
