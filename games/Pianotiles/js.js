@@ -98,9 +98,11 @@ function click(evt){
             let tyh = Math.floor((r.y+200) * innerHeight/1000);
             if( x >= tx && x<= txw &&
                 y >= ty && y <= tyh){
-                if(r.black){
+                if(r.black ){
+                    if(r.color !== "gray") {
+                        increaseScore();
+                    }
                     r.color = "gray";
-                    increaseScore();
                     return
                 }else{
                     r.black = true;
