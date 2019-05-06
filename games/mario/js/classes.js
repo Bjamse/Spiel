@@ -118,7 +118,7 @@ class Player{
 
 
     draw(){
-        pc.clearRect(this.x, this.y, 12, 12);
+        pc.clearRect(0, 0, 256, 256);
 
         if((KEY_STATUS["space"]|| KEY_STATUS["up"] || KEY_STATUS["W"])&& this.onTheGround){
             this.yspeed = -10.5;
