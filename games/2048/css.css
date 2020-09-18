@@ -71,7 +71,7 @@ h1{
     color: white;
     font-size: 20px;
     text-shadow: 1px 1px 0  black, -1px -1px 0 black, 1px -1px 0  black, -1px 1px 0  black;
-    font-family: "Comic Sans MS", fantasy,Serif;
+    font-family: 'Comic Neue', cursive;
 }
 div.button{
     border: solid white 2px;
@@ -86,7 +86,7 @@ div.button{
     float: right;
     text-align: center;
     margin: 3px;
-    font-family: "Comic Sans MS", fantasy,Serif;
+    font-family: 'Comic Neue', cursive;
     color: white;
     box-shadow: 0 5px #999;
 }
